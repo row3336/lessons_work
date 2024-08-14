@@ -76,4 +76,3 @@ lst = [12, 'hello', [1, 2, 3], False, 99.87]
 # while i < len(lst):
 #     print(lst[i])
 #     i += 1
-
