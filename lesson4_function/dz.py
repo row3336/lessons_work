@@ -124,3 +124,70 @@ N^M без использования оператора возведения в
 # • Добавление элемента К [в конец массива/на N-ю позицию].
 # • Удаление из списка [последнего/Nго элемента].
 # • Сортировка списка по (возрастанию/убыванию). Повторяющиеся — убирать.
+
+
+# # • Ввод с клавиатуры/инициализация случайными числами (с параметрами).
+# import random
+# def foo1(count):
+#     # lst = [int(input('введите число: ')) for _ in range(count)]
+#     lst = [random.randint(1, 100) for _ in range(count)] #random 4isla
+#     print(lst)
+#
+#
+# foo1(15)
+
+# • Вывод списка на экран (в одну строчку).
+# def foo2(lst):
+#     s = ''
+#     for i in lst:
+#     #     print(i, end =' ')  # v print по умалчанию end = \n (перенос строчки)
+#     # print()
+#         s += str(i) + ' '
+#     print(s)
+#
+#
+# foo2([1, 4, 5, 7, 8])
+
+# • Подсчет количества элементов, равных (больших/меньших) N.
+# def foo3(lst, n):
+#     less_n = 0
+#     equal_n = 0
+#     bigger_n = 0
+#     for i in lst:
+#         if i < n:
+#             less_n += 1
+#         elif i > n:
+#             bigger_n += 1
+#         else:
+#             equal_n += 1
+#     print(f'{less_n} = less_n, {equal_n} =equal_n, {bigger_n} =bigger_n')
+#
+#
+# foo3([1, 2, 4, 6, 7, 8, 88], 3)
+
+# • Добавление элемента К [в конец массива/на N-ю позицию].
+# def foo4(lst, k, n):
+#     tmp_lst = []
+#     for _ in range(len(lst)):
+#         if _ == n:
+#             tmp_lst.append(k)
+#         tmp_lst.append(lst[_])
+#     if _ == n - 1:
+#         tmp_lst.append(k)
+#     print(tmp_lst)
+#
+# foo4([1, 2, 4, 6, 7, 9, 100, 225], 777, 8)
+
+
+# • Удаление из списка [последнего/Nго элемента].
+# def foo4(lst, n):
+#     tmp_lst = []
+#     i = 0
+#     while i < len(lst):
+#         if i == n:
+#             i += 1
+#         tmp_lst.append(lst[i])
+#         i += 1
+#     print(tmp_lst)
+#
+# foo4([1, 2, 4, 6, 7, 9, 100, 225], 6,)
