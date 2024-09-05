@@ -191,3 +191,83 @@ N^M без использования оператора возведения в
 #     print(tmp_lst)
 #
 # foo4([1, 2, 4, 6, 7, 9, 100, 225], 6,)
+
+
+# • Сортировка списка по (возрастанию/убыванию). Повторяющиеся — убирать.
+# первый вариант сортировка выбором находим наименьшее добавляем в новый список и удаляем из текущего
+# lst.sort() второй вариант квик сорт
+
+# сортировка пузырьком
+
+# lst = [12, 4, 66, 654, 23, 32, 65, 13]
+#
+# def foo(lst):
+#     for i in range(len(lst) - 1):         # -1 оптимизация последнего сравнения которое не нужно
+#         for j in range(len(lst) - i - 1): #-i оптимизация если подследние элементы не делают свап то не учавствуют в след сравнении
+#             if lst[j] > lst[j + 1]:
+#                 tmp = lst[j]
+#                 lst[j] = lst[j + 1]
+#                 lst[j + 1] = tmp
+#     print(lst)
+
+# 7) Найти третий максимум в списке.
+#
+# def foo(lst):
+#     max_lst = []
+#     for _ in range(3):
+#         max_elem = lst[0]
+#         for i in lst:
+#             if i > max_elem and i not in max_lst:
+#                 max_elem = i
+#         max_lst.append(max_elem)
+#     print(max_lst)
+#
+# foo([12, 4, 66, 654, 23, 32, 65, 13])
+
+
+# 8) Сдвинуть все элементы массива на два вправо. Оставшиеся элементы — поставить слева в том же порядке.
+
+# def foo(lst):
+#     if len(lst) > 1:
+#         # lst = [4, 5, 1, 2, 3] надо сделать так, используем второй список
+#         res_lst = [0] * len(lst)
+#         res_lst[0] = lst[-2]
+#         res_lst[1] = lst[-1]
+#         i = 2
+#         while i < len(lst):
+#             res_lst[i] = lst[i -2]
+#             i += 1
+#         print(res_lst)
+#     else:
+#         print('список слишклм мал')
+#
+# foo([1, 2, 3, 4, 5, 6, 7, 8])
+
+
+# 9) Вставить K после максимального элемента. + подсчет максимума с индексом
+
+# def foo4(lst, k, n):
+#     tmp_lst = []
+#     for _ in range(len(lst)):
+#         if _ == n:
+#             tmp_lst.append(k)
+#         tmp_lst.append(lst[_])
+#     if _ == n - 1:
+#         tmp_lst.append(k)
+#     print(tmp_lst)
+#
+#     # поиск максимального элемента и его индекса
+#     def foo(lst):
+#         max_elem = lst[0]
+#         max_index = 0
+#         i = 0
+#         for elem in lst:
+#             if elem > max_elem:
+#                 max_elem = elem
+#                 max_index = i
+#             i += 1
+#             # print(max elem)
+#         foo4(lst, max_index + 1, k)
+#
+#
+# foo4([1, 2, 4, 6, 7, 9, 100, 225, 54, 67], 777, 8)
