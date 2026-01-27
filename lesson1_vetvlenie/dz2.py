@@ -123,33 +123,3 @@
 #             print(f'умножение a * b = {a * b}')
 #         if op == 'pow':
 #             print(f'a в степени b = {a ** b}')
-
-
-
-# a = int(input('число1: '))
-# b = int(input('число2: '))
-# op = input('ведите действие: ')
-# if b == 0:
-#     if op == "/" or op == 'mod' or op == 'div':
-#         print(' b == 0, сорри на 0 делить нельзя')
-#     else:
-#         if op == '/':
-#             print(f'деление a / b = {a / b}')
-#         if op == 'mod':
-#             print(f'целочисленное деление a // b = {a // b}')
-#         if op == 'div':
-#             print(f'остаток от деления a % b = {a % b}')
-#         if op == '+':
-#             print(f'сумма a + b = {a + b}')
-#         if op == '-':
-#             print(f'вычетание a - b = {a - b}')
-#         if op == '*':
-#             print(f'умножение a * b = {a * b}')
-#         if op == 'pow':
-#             print(f'a в степени b = {a ** b}')
-
-
-a = int(input('число: '))
-print(a // 100)
-print(a // 10 % 10)
-print(a % 10)
