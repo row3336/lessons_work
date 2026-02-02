@@ -74,6 +74,7 @@
 # else:
 #     print('не входит')
 
+# if a < m and b < k or b < m and a < k or a < m and c < k or c < m or a < k or b < m and c < k or c < m and b < k :
 
 # 2) Вывести равнобедренный треугольник из символа "*" (высота указывается с клавиатуры)
 # h = int(input('введите высоту треугольника : '))
